@@ -1,3 +1,4 @@
+setwd("C:\\Users\\HP\\Desktop\\R data sets")
 movie<-read.csv("Movie-Ratings.csv")
 head(movie)
 colnames(movie)<-c("film","genre","criticsratings","audiencerating","budgetmillions","releasingyear")
