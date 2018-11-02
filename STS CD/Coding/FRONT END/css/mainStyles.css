@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto:300,400,500,700');
+
+.wrapper{
+		width:100%;
+		margin:0 auto;
+	}
+	.container{
+		background-color:#3a539b;
+		padding:50px 30px;
+		width:100%;
+		box-sizing: border-box;
+		overflow-y: visible;
+		height: 100%;
+		position: fixed;
+	}
+	#recTicket{
+		width: 100%;
+		display: block;
+		height: 40px;
+		background-color: #fff;
+		border: none;
+		border-radius: 5px;
+		color: #515151;
+		font-family: "Lato";
+		font-size: 16px;
+		font-weight: 600;
+		margin-top: 50px;
+	}
+	#viewTicket{
+		width: 100%;
+		display: block;
+		height: 40px;
+		background-color: #fff;
+		border: none;
+		border-radius: 5px;
+		color: #515151;
+		font-family: "Lato";
+		font-size: 16px;
+		font-weight: 600;
+		margin-top: 10px;
+	}
+	
+	.logo{
+		margin-bottom:70px;
+		text-align: center;
+		height: 70px;
+	}
+	
+	.logo>img{
+		max-height: 100%;
+		max-width: 100%;
+	}
+	
+	.label{
+		text-align: center;
+	}
+	.label_2>img{
+		max-width:100%;
+		max-height:100%;
+		position:absolute;
+		top:-22px;
+		right:-5px;
+	}
+	
+	.label_1{
+		display:inline-block;
+	}
+	
+	.label_2{
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.label1{
+		font-size:16px;
+		margin-bottom:0px;
+		font-weight: 300;
+		font-family: "Open sans";
+		color:#fff;
+	}
+
+	.label2{
+		font-size:16px;
+		font-weight: 600;
+		font-family: "Open sans";
+		color:#fff;
+	}
+
+	.label3{
+		font-size:30px;
+		font-weight: 700;
+		font-family: "Open sans";
+		color:#fff;
+		position: relative;
+	}
+
+	.label_2{
+		position: relative;
+	}
+	
+	.input_box{
+		position:relative;
+		margin-top: 25px !important;
+		width:50%;
+		margin:0 auto;
+	}
+	
+	.input_box>form>input[type="text"]#destination{
+		width:100%;
+		padding:10px 30px;
+		box-sizing:border-box;
+		border:none;
+		border-radius:2px;
+		font-family:"Lato";
+		font-size:18px;
+		font-weight: 400;
+	}
+
+	#source{
+		width:100%;
+		padding:10px 30px;
+		box-sizing:border-box;
+		border:none;
+		border-radius:2px;
+		font-family:"Lato";
+		font-size:18px;
+		font-weight: 400;
+		margin-bottom:10px;
+	}
+
+	input[type="submit"] {
+		width: 100%;
+		display: block;
+		height: 40px;
+		background-color: #ffd800;
+		border: none;
+		border-radius:5px;
+		color:#515151;
+		font-family:"Lato";
+		font-size:16px;
+		font-weight: 600;
+		margin-top:10px;
+	}
+	
+	.mic{
+		position: absolute;
+		top:15px;
+		left:10px;	
+		z-index: 10;
+		color:#3a539b;
+	}
+	
+	.plane{
+		position: absolute;
+		right:10px;
+		z-index:10;
+		top: 15px;
+		color:#3a539b;
+	}
+
+	.plane:hover{
+		cursor:pointer;
+	}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+	.wrapper{
+		width:100%;
+		margin:0 auto;
+	}
+	.container{
+		background-color:#3a539b;
+		padding:50px 30px;
+		width:100%;
+		box-sizing: border-box;
+		overflow-y: visible;
+		height: 100%;
+		position: fixed;
+	}
+	
+	.logo{
+		margin-bottom:70px;
+		text-align: center;
+		height:70px;
+	}
+	
+	.logo>img{
+		max-height: 100%;
+		max-width: 100%;
+	}
+	
+	
+	.label{
+		position: relative;
+		text-align: center;
+	}
+	.label>img{
+		max-width:100%;
+		max-height: 100%;
+		position:absolute;
+		top:-25px;
+		right:15px;
+	}
+	
+	.label_1{
+		display:inline-block;
+	}
+	
+	.label_2{
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.label1{
+		font-size:16px;
+		margin-bottom:0px;
+		font-weight: 300;
+		font-family: "Open sans";
+		color:#fff;
+	}
+
+	.label2{
+		font-size:16px;
+		font-weight: 600;
+		font-family: "Open sans";
+		color:#fff;
+	}
+
+	.label3{
+		font-size:30px;
+		font-weight: 700;
+		font-family: "Open sans";
+		color:#fff;
+	}
+	
+	.input_box{
+		position:relative;
+		margin-top: 25px;
+		width:100%;
+	}
+	
+	#source{
+		width:100%;
+		padding:10px 30px;
+		box-sizing:border-box;
+		border:none;
+		border-radius:2px;
+		font-family:"Lato";
+		font-size:18px;
+		font-weight: 400;
+		margin-bottom:10px;
+	}
+	
+	.input_box>form>input[type="text"]{
+		width:100%;
+		padding:10px 30px;
+		box-sizing:border-box;
+		border:none;
+		border-radius:2px;
+		font-family:"Lato";
+		font-size:18px;
+		font-weight: 400;
+		margin-bottom:10px;
+	}
+	
+	input[type="submit"] {
+		width: 100%;
+		display: block;
+		height: 40px;
+		background-color: #ffd800;
+		border: none;
+		border-radius:5px;
+		color:#515151;
+		font-family:"Lato";
+		font-size:16px;
+		font-weight: 600;
+		margin-top:10px;
+	}
+
+}

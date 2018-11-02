@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto:300,400,500,700');
+.wrapper{
+ 		width:100%;
+	}
+	
+	html,body{
+		margin:0px;
+		padding:0px;
+	}
+	
+	header{
+		position:fixed;
+		height: auto;
+		overflow: hidden;
+		width: 100%;
+		box-sizing: border-box;
+		z-index:1000;
+	}
+	
+	.header-container{
+		background-color: #3a539b;
+		padding:10px;
+		height: auto;
+	}
+	
+	.head1{
+		height: auto;
+		overflow: hidden;
+	}
+	
+	.logo{
+		display: inline;
+		width: 80%;
+		height: 30px;
+	}
+	
+	.logo>img{
+		max-width: 25%;
+		max-height:25%;
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
+	}
+	
+	.back{
+		width: 35%;
+		color:#fff;
+	}
+	
+	.head2{
+		height: auto;
+		margin-top:10px;
+		overflow: hidden;
+	}
+	
+	.head2>h2,head2>input{
+		display: inline;
+		vertical-align: middle;
+	}
+	
+	.head2>input{
+		width: 40%;
+		border-radius:12px;
+		background-color: rgba(0,0,0,0.5);
+		-webkit-background-color:rgba(0,0,0,0.5);
+		color:#fff;
+		border:none;
+		padding:7px 15px;
+		box-sizing: border-box;
+		font-family:"Roboto";
+		font-weight:400;
+	}
+	
+	.head2>h2{
+		color:#fff;
+		margin-right: 2%;
+		font-family:"Lato";
+		font-size: 20px;
+		font-weight: 600;
+	}
+	
+	.container{
+		overflow: hidden;
+		height: 100vh;
+		width: 100%;
+		overflow-y: scroll;
+	}
+	
+	.content_area{
+    margin-top:100px !important;
+		width:100%;
+		height: auto;
+		overflow: hidden;
+		padding:10px 0px;
+		z-index:-20;
+	}
+	
+	.header2{
+		height: auto;
+		overflow: hidden;
+		background-color:#eee;
+		margin-bottom:20px;
+	}
+	
+	.header2>.seats,.header2>.arrivalTime{
+		display: inline-block;
+	  vertical-align: middle;
+	}
+
+	.header2>.seats>p,.header2>.arrivalTime>h4{
+		margin:0px;
+	}
+
+	.header2>.seats{
+		text-align: center;
+	}
+
+	.header2>.seats>p{
+		margin-top:10px;
+		font-family: "Roboto";
+		font-size: 24px;
+		font-weight: 400;
+		margin-bottom: 5px;
+		margin-left:3px;
+	}
+	
+	.viaStages>#stops{
+		width: 95%;
+		margin:0 auto;
+		height: 60px;
+		font-family: "Roboto";
+		font-size:20px;
+		font-weight: 300;
+		overflow: hidden;
+		word-break: keep-all;
+	}
+	
+	.header2>.seats{
+		width: 50%;
+		height: 100px;
+		padding:10px 10px;
+		box-sizing: border-box;
+		border-right: 1px solid #fefefe;
+	}
+	
+	.header2>.arrivalTime{
+		width: 48%;
+		height: 100px;
+		padding:10px 10px;
+		box-sizing: border-box;
+	}
+	.header2>.arrivalTime>h4{
+		font-family: "Roboto";
+		margin-top:12px;
+		font-size: 14px;
+		font-weight: 400;
+		text-align: center;
+	}
+	
+	.header2>.arrivalTime>.countdown{
+		text-align: center;
+		margin:10px 0px 0px 0px;
+		font-family: "Roboto";
+		font-size:24px;
+	}
+	
+	.mapsContainer{
+		width: 95%;
+		margin:0 auto;
+		height: 300px;
+		background-color:#515151;
+		overflow: hidden;
+	}
+
+#map-canvas{
+	width: 100%;
+	height: 100%;
+}
+	
+	.infoArea{
+		margin-top:25px;
+		height: auto;
+		overflow: hidden;
+		padding:10px 10px;
+		box-sizing: border-box;
+	}
+	
+	.infoArea>.infotitle{
+		font-family:"Lato";
+		font-weight: 600;
+		font-size:18px;
+		margin-bottom:5px;
+	}
+
+	.seats>h4{
+		font-family: "Roboto";
+		font-size:14px;
+		font-weight: 400;
+		margin-top:12px;
+	}
+
+

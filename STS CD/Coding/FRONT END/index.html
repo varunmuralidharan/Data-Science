@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width , intial-scale=1">
+<title>Welcome to STS</title>
+<link rel="stylesheet" href="css/mainStyles.css">
+<link rel="stylesheet" href="css/reset.css">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+</head>
+<body bgcolor="fefefe">
+<div class="wrapper">
+	<div class="container">
+		<div class="logo">
+			<img src="assets/white_logo.png" alt="company_logo">			
+		</div>
+		<div class="label">
+			<div class="label_1">
+				<p class="label1">Enter</p>
+				<p class="label2">Source &#38;</p>
+			</div>
+			<div class="label_2">
+				<img src="assets/map_img.png" class="align-right" alt="map">
+				<p class="label3">Destination</p>
+			</div>
+		</div>
+		<div class="input_box">
+			<form action="/stssite/busesDisplay.php" method="post">
+				<input type="text" id="source" name="source" onKeyUp="getdesti(this)" placeholder="source" list="mylist">
+				<input type="text" id="destination" onKeyUp="getdesti(this)" name="destination" placeholder="destination" list="mylist">
+				<datalist id="mylist">
+					<option>Select source</option>
+				</datalist>
+				<input type="submit" value="Submit">
+			</form>
+			<input type="button" id="recTicket" value="Receive Ticket" onclick="receiveTicket()">
+			<input type="button" id="viewTicket" value="View Saved Ticket" onclick="viewTicket()">
+			<input type="file" id="input" accept="image/*" multiple onchange="handleFiles(this.files)">
+ 			<video autoplay></video>
+		</div>
+	</div>
+</div>
+<script src="qcode-decoder-master/build/qcode-decoder.min.js"></script>
+<script>
+	function getdesti(ele){
+		var searchTerm = this.value;
+		if(window.XMLHttpRequest){
+			httpreq = new XMLHttpRequest();
+		}
+		httpreq.onreadystatechange = function(){
+			if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("mylist").innerHTML = this.responseText;
+            }
+		}
+		httpreq.open("GET","/stssite/index-getdestination.php?term="+searchTerm,true);
+		httpreq.send();
+	}
+
+	function receiveTicket(){
+		var qr = new QCodeDecoder();
+ 
+		if (!(qr.isCanvasSupported() && qr.hasGetUserMedia())) {
+		alert('Your browser doesn\'t match the required specs.');
+		throw new Error('Canvas and getUserMedia are required');
+		}
+
+		var video = document.querySelector('video');
+		
+		function resultHandler (err, result) {
+		if (err)
+			return console.log(err.message);
+			window.location = "ticket-view.php?result="+result;
+		}
+		qr.decodeFromCamera(video, resultHandler);
+ 
+	}
+
+	function handleFiles(file){
+		var qr = new QCodeDecoder();
+ 
+		if (!(qr.isCanvasSupported() && qr.hasGetUserMedia())) {
+		alert('Your browser doesn\'t match the required specs.');
+		throw new Error('Canvas and getUserMedia are required');
+		}
+		function resultHandler (err, result) {
+		if (err)
+			return console.log(err.message);
+			window.location = "ticket-view.php?result="+result;
+		}
+		qr.decodeFromImage(file, resultHandler);
+	}
+	
+	function viewTicket(){
+		window.location = "ticket-view.php";
+	}
+</script>
+</body>
+</html>
