@@ -1,0 +1,13 @@
+1- (1-R2)(N-1/N-k)
+
+
+t=coeff-0/stderror
+
+ln(y) = a + b ln(x)
+
+b is elasticity, if model is good.
+
+point estimate = beta * price average/qty avg
+
+if elasticity >1 then reduce price by max of 5%
+else if elasticity <1 then inc price by 5 % max
